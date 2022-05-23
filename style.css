@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=EB+Garamond&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+    color: #b5bBbD;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #e8e1e0;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: #212222;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav>div {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100vw;
+    background-color: #1C1E1F;
+    color: #b5bBbD;
+}
+
+nav>div>div {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+nav>div>div>a {
+    color: #b5bBbD;
+    font-size: 2rem;
+    position: relative;
+}
+
+nav>div>div>a::before {
+    content: '';
+    width: 10%;
+    border-bottom: 1px solid #b5bBbD;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+nav>div>div>a:hover::before {
+    opacity: 1;
+    width: 100%;
+    color: #e8e1e0;
+}
+
+nav>div>h1 {
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0 10px;
+    font-size: 2.5rem;
+}
+
+nav>div>h1>span {
+    font-size: 3.5rem;
+    color: #a07fd0;
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+    margin: 90px 0 0 155px;
+}
+
+.topics,
+.main {
+    background-color: #1C1E1F;
+    border: 1px solid rgba(160, 127, 208, .4);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.topics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: auto;
+    height: auto;
+
+    padding: 0;
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.topics>a {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 7px 20px;
+}
+
+.topics>a:hover {
+    background-color: rgba(160, 127, 208, .4);
+}
+
+.main {
+    width: 100%;
+}
+
+.info {
+    overflow: hidden;
+    clear: both;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(160, 127, 208, .4);
+    text-align: justify;
+}
+
+.info:last-of-type {
+    border-bottom: none;
+}
+
+.info>a>img {
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+    border: 1px solid #fff4;
+
+}
+
+.main>h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.info>h2 {
+    font-size: 1.2rem;
+
+}
