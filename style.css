@@ -158,5 +158,27 @@ nav>div>h1>span {
 
 .info>h2 {
     font-size: 1.2rem;
+}
 
+@media (max-width: 481px) {
+    nav>div>div>a {
+        font-size: 1rem;
+     }
+
+     nav>div>h1 {
+         font-size: 1.5rem;
+     }
+
+     nav>div>h1>span {
+         font-size: 2.5rem;
+     }
+
+     .topics {
+         display: none;
+     }
+
+     .container {
+        width: 100vw;
+        margin: 55px 0 0;
+     }
 }
