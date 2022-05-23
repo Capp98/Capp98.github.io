@@ -199,7 +199,7 @@ h2{
     grid-template-columns: .15fr .5fr repeat(2, 1fr);
     align-items: center;
     -ms-grid-row-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .powers-table>div>h2{
