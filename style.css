@@ -160,7 +160,7 @@ nav>div>h1>span {
     font-size: 1.2rem;
 }
 
-@media (max-width: 481px) {
+@media only screen and (max-width: 768px) {
     nav>div>div>a {
         font-size: 1rem;
      }
