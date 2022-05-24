@@ -69,6 +69,7 @@ nav>div span {
 }
 
 .container {
+    position: relative;
     width: 85vw;
     height: 100vh;
     overflow-y: auto;
@@ -81,6 +82,7 @@ nav>div span {
     padding: 20px;
     display: flex;
     height: 580px;
+    overflow-x: hidden;
     border-radius: 5px;
     background-color: #1C1E1F;
     border: 1px solid rgba(160, 127, 208, .4);
@@ -100,7 +102,6 @@ nav>div span {
 
     direction: rtl;
     overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .topics>div>span {
@@ -173,7 +174,10 @@ h2{
 
 .powers-table {
     margin-top: 40px;
-    padding: 0 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 90%;
 }
 
 .powers-table>div{
@@ -184,6 +188,8 @@ h2{
     -ms-grid-row-align: center;
     margin-bottom: 20px;
 }
+
+.powers-table>div:last-of-type {margin-bottom: 40px;}
 
 .powers-table>div>h2{
     transform: rotateZ(-45deg);
