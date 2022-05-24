@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 
-<body>
+<body onload="ae()">
     <nav>
         <div>
             <a onclick="showTopics(this)" href="#" style="font-family: Arial, Helvetica, sans-serif;">></a>
@@ -51,7 +51,7 @@
             <div class="top">
                 <div class="infos">
                     <span>
-                        <h2>Dano:</h2> Mágico
+                        <h2 id="ae">Dano:</h2> Mágico
                     </span>
                     <span>
                         <h2>Local:</h2> Coven
@@ -125,6 +125,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function ae() {
+            document.getElementById('ae').innerText = screen.width
+        }
+    </script>
 </body>
 
 </html>
