@@ -1,5 +1,4 @@
 function showTopics(element) {
-    alert(screen.width);
     let el = document.getElementsByClassName('topics')[0];
     console.log(el.style.marginLeft);
     if (el.style.marginLeft != '0px') {

@@ -186,7 +186,7 @@ h2 {
 }
 
 .powers-table {
-    margin-top: 40px;
+    margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
@@ -200,10 +200,6 @@ h2 {
     justify-content: center;
     -ms-grid-row-align: center;
     margin-bottom: 20px;
-}
-
-.powers-table>div:last-of-type {
-    margin-bottom: 40px;
 }
 
 .powers-table>div>h2 {
@@ -288,5 +284,50 @@ h2 {
     .powers-table>div>span {
         width: 180px;
         height: 105px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav>div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav>div>h2 {
+        position: unset;
+        margin: unset;
+        transform: unset;
+    }
+    
+    .container {
+        padding: 5px;
+    }
+
+    .powers-table {
+        left: unset;
+        transform: unset;
+        width: 100%;
+    }
+
+    .powers-table>div{
+        width: 100%;
+    }
+
+    .powers-table>div>span {
+        width: 120px;
+        height: 70px;
+        font-size: 8px;
+        padding: 5px 10px;
+    }
+
+    .powers-table p {
+        font-size: .6rem;
+    }
+
+    .infos>span>h2,
+    .infos>span,
+    .powers-table>div>h2 {
+        font-size: .8rem;
     }
 }
