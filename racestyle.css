@@ -9,6 +9,7 @@
     font-family: 'EB Garamond', serif;
     color: #b5bBbD;
     letter-spacing: 2px;
+    transition: all .3s ease-in-out;
 }
 
 *::-webkit-scrollbar {
@@ -34,7 +35,10 @@ body {
     font-size: 62.5%;
     background-color: #212222;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 nav {
@@ -50,11 +54,17 @@ nav>div {
 }
 
 nav>div>h1,
+nav>div>a,
 nav>div>h2 {
     display: inline-block;
     white-space: nowrap;
     margin-left: 15px;
     font-size: 1.7rem;
+}
+
+nav>div>a {
+    transition: all .3s ease-in-out;
+    display: none;
 }
 
 nav>div>h2 {
@@ -70,8 +80,8 @@ nav>div span {
 }
 
 .container {
+    position: relative;
     width: 85vw;
-    height: 100vh;
     overflow-y: auto;
     justify-content: space-evenly;
     margin: 65px 0 0 175px;
@@ -79,7 +89,6 @@ nav>div span {
 
 .topics,
 .container {
-    padding: 20px;
     display: flex;
     height: 580px;
     border-radius: 5px;
@@ -99,6 +108,7 @@ nav>div span {
     left: 10px;
     top: 65px;
 
+    z-index: 999;
     direction: rtl;
     overflow-y: auto;
     overflow-x: hidden;
@@ -134,14 +144,16 @@ nav>div span {
 }
 
 .main {
+    position: absolute;
     width: 100%;
+    height: fit-content;
+    padding: 20px;
 }
 
 .breaf {
     border-radius: 5px;
     float: left;
     margin-right: 15px;
-    margin-bottom: 15px;
     border: 1px solid #fff4;
     width: 200px;
 }
@@ -225,4 +237,34 @@ p::first-letter {
 #classes>li>a:hover+div,
 #classes>li>div:hover {
     display: block;
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        position: relative;
+        height: 9%;
+    }
+    nav>div>a {
+        display: inline-block;
+    }
+
+     nav>div>h1 {
+         font-size: 1.5rem;
+     }
+
+     nav>div span {
+         font-size: 2.5rem;
+     }
+
+     .topics {
+         margin-left: -160px;
+     }
+
+     .container {
+        position: absolute;
+        width: 100vw;
+        margin: 0px 0 0;
+        height: 91%;
+     }
 }

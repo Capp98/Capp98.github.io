@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: 'EB Garamond', serif;
     color: #b5bBbD;
+    transition: all .3s ease-in-out;
     letter-spacing: 2px;
 }
 
@@ -34,6 +35,10 @@ body {
     font-size: 62.5%;
     background-color: #212222;
     overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 nav {
@@ -49,11 +54,17 @@ nav>div {
 }
 
 nav>div>h1,
+nav>div>a,
 nav>div>h2 {
     display: inline-block;
     white-space: nowrap;
     margin-left: 15px;
     font-size: 1.7rem;
+}
+
+nav>div>a {
+    transition: all .3s ease-in-out;
+    display: none;
 }
 
 nav>div>h2 {
@@ -100,6 +111,7 @@ nav>div span {
     left: 10px;
     top: 65px;
 
+    z-index: 999;
     direction: rtl;
     overflow-y: auto;
 }
@@ -156,11 +168,12 @@ nav>div span {
     padding: 10px 0;
     justify-content: space-evenly;
 }
-h2{
+
+h2 {
     display: inline-block;
 }
 
-.infos>span{
+.infos>span {
     font-size: 1.2rem;
 }
 
@@ -180,7 +193,7 @@ h2{
     width: 90%;
 }
 
-.powers-table>div{
+.powers-table>div {
     display: grid;
     grid-template-columns: .15fr .5fr repeat(2, 1fr);
     align-items: center;
@@ -189,10 +202,14 @@ h2{
     margin-bottom: 20px;
 }
 
-.powers-table>div:last-of-type {margin-bottom: 40px;}
+.powers-table>div:last-of-type {
+    margin-bottom: 40px;
+}
 
-.powers-table>div>h2{
+.powers-table>div>h2 {
     transform: rotateZ(-45deg);
+    justify-self: center;
+    width: fit-content;
 }
 
 .powers-table>div>img {
@@ -209,7 +226,7 @@ h2{
 
     display: flex;
     flex-direction: column;
-    
+
     border-radius: 10px;
     overflow-y: auto;
     border: 1px solid #b5bBbD;
@@ -223,4 +240,53 @@ h2{
     text-align: center;
     font-size: 1.7rem;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        position: relative;
+        height: 9%;
+    }
+
+    nav>div>a {
+        display: inline-block;
+    }
+
+    nav>div>h1 {
+        font-size: 1.5rem;
+    }
+
+    nav>div span {
+        font-size: 2.5rem;
+    }
+
+    .topics {
+        margin-left: -160px;
+    }
+
+    .container {
+        position: absolute;
+        width: 100vw;
+        margin: 0px 0 0;
+        height: 91%;
+    }
+
+     .powers-table p {
+         font-size: .8rem;
+         text-align: start;
+     }
+
+    .powers-table>div {
+        grid-template-columns: .4fr .2fr repeat(2, 1fr);
+    }
+
+    .powers-table>div>img {
+        width: 25px;
+    }
+
+    .powers-table>div>span {
+        width: 180px;
+        height: 105px;
+    }
 }
