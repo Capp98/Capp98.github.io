@@ -232,4 +232,14 @@ nav>div span {
         transform: unset;
     }
 
+    .main {
+        padding: 15px;
+        height: max-content;
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding-bottom: 20px;
+    }
+
 }

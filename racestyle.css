@@ -285,9 +285,16 @@ p::first-letter {
 
     .main {
         padding: 15px;
+        height: max-content;
+        margin-bottom: 10px;
+        position: unset;
     }
 
     .breaf {
         width: 150px;
+    }
+
+    body {
+        padding-bottom: 20px;
     }
 }
