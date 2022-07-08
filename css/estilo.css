@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+:root {
+    --light-transparent-bg: rgba(255, 255, 255, .6);
+    --dark-transparent-bg: rgba(0, 0, 0, .6);
+    --transparent-bg: rgba(255, 255, 255, .9);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: rgb(158,178,59);
+    background: linear-gradient(140deg, rgba(158,178,59,1) 0%, rgba(110,198,144,1) 77%, rgba(70,215,213,1) 100%);
+    height: 100%;
+}
+
+header {
+    height: 3em;
+    background: var(--light-transparent-bg);
+    width: 100%;
+    text-align: center;
+}
+
+header > h1 {
+    line-height: 1.5em;
+}
+
+main {
+    margin: 15px 0;
+    display: inline-block;
+}
+
+/* ASIDE
+------*/
+
+aside {
+    width: 10%;
+    text-align: center;
+    margin-left: 10px;
+    position: sticky;
+    top: 0;
+    clear: both;
+    display: inline-block;
+}
+
+aside > nav li {
+    margin: 5px 0;
+}
+
+aside > nav li span {
+    opacity: 0;
+    display: none !important;
+    width: 1em;
+    font-size: 1em !important;
+    height: 10px !important;
+    vertical-align: middle !important;
+    margin-top: -.8em;
+}
+
+aside > nav li span img {
+    width: 1em;
+}
+
+aside > nav li:hover span {
+    opacity: 1;
+    display: inline-block !important;
+    margin-right: 5px;
+}
+
+aside > nav a {
+    font-size: 1.2rem;
+    padding: 7px;
+    line-height: 1rem;
+    display: block;
+    background: var(--transparent-bg);
+    border-radius: 10px;
+    transition: all .1s ease-in;
+}
+
+aside > nav a:hover {
+    background: var(--dark-transparent-bg);
+    color: #fff;
+}
+
+/* SECTION
+--------*/
+
+main > section {
+    float: right;
+    margin-right: 10px;
+    height: fit-content;
+    width: 86%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    margin-bottom: 10px;
+}
+
+section > article {
+    flex-grow: 1;
+    background: var(--light-transparent-bg);
+    text-align: center;
+    height: max-content;
+    padding-bottom: 15px;
+    margin: 10px 10px;
+    max-width: 300px;
+
+    border-radius: 20px;
+    flex-basis: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+article h2 {
+    width: 100%;
+    margin: 0px auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+article > img {
+    /* opacity: .8; */
+    width: 100%;
+}
+
+article > img:hover {
+    /* opacity: 1; */
+}
+
+section > article > a > div.tags > h4:not(:first-of-type)::after {
+    /* content: ' '; */
+    height: 60%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1px solid blue;
+}
+
+
+article > a > div:not(.tags) h4 {
+    margin-top: 10px;
+}
+
+section > article > a > div {
+    width: 40%;
+    margin: 0px auto;
+}
+
+section > article > a > div div {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+section > article i:nth-child(1) {
+float: left;
+}
+section > article i:nth-child(3) {
+    float: right;
+}
+
+section > article span {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: transparent;
+    position: relative;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+section > article span::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: rgb(158,178,59);
+}
+
+/*
+
+/*--- Iluminação ---*/
+section > article span:first-of-type::after {
+    width: 0%;
+}
+
+section > article span:first-of-type.vintecinco::after {
+    width: 25%;
+}
+
+section > article span:first-of-type.cinquenta::after {
+    width: 50%;
+}
+
+section > article span:first-of-type.setentacinco::after {
+    width: 75%;
+}
+
+section > article span:first-of-type.cem::after {
+    width: 100%;
+}
+
+/*--- Água ---*/
+section > article span:last-of-type::after {
+    width: 25%;
+}
+
+section > article span:last-of-type.cinquenta::after {
+    width: 50%;
+}
+
+section > article span:last-of-type.cem::after {
+    width: 100%;
+}

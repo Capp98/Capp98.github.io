@@ -1,134 +1,272 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="https://kit.fontawesome.com/cd7fbace7b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="default.css">
-    <script src="javascript.js"></script>
-    <title>Home</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Plantas</title>
 </head>
 
 <body>
-    <nav>
-        <div>
-            <a onclick="showTopics(this)" href="#" style="font-family: Arial, Helvetica, sans-serif;">></a>
-            <h1><span>T</span>he <span>M</span>ist</h1>
-            <h2><span>R</span>aças</h2>
-        </div>
-    </nav>
+    <header>
+        <h1>Plantas</h1>
+    </header>
 
-    <div class="topics">
-        <div>
-            <a onclick="show(this)">Universo</a>
-            <span>
-                <a href="index.html">Raças</a>
-                <a href="#">Classes</a>
-                <a href="#">História</a>
-            </span>
-        </div>
-        <div>
-            <a onclick="show(this)">Notícias</a>
-            <span>
-                <a href="">Eventos</a>
-                <a href="">Atualizações</a>
-                <a href="">Eventos futuros</a>
-            </span>
-        </div>
-        <div>
-            <a onclick="show(this)">Região</a>
-            <span>
-                <a href="">Clima</a>
-                <a href="">Biomas</a>
-                <a href="">Cidades</a>
-            </span>
-        </div>
-    </div>
+    <main>
+        <aside>
+            <h2>Categorias</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Aquáticas</a></li>
+                    <li><a href="#"><span class="arbusto"><img src="./img/icons/bush.png"></span>Arbustos</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-tree"></i></span>Árvores</a></li>
+                    <li><a href="#">Bromélias</a></li>
+                    <li><a href="#">Cactos</a></li>
+                    <li><a href="#"><span class="material-icons">local_florist</span>Flores</a></li>
+                    <li><a href="#">Folhagens</a></li>
+                    <li><a href="#">Forrações</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-apple-whole"></i></span>Frutíferas</a></li>
+                    <li><a href="#">Grãos</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-carrot"></i></span>Hortaliças</a></li>
+                    <li><a href="#">Orquídeas</a></li>
+                    <li><a href="#">Palmeiras</a></li>
+                    <li><a href="#">PANCs</a></li>
+                    <li><a href="#">Samambaias</a></li>
+                    <li><a href="#">Suculentas</a></li>
+                    <li><a href="#">Trepadeiras</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <div class="container">
-        <div class="main">
-            <div class="info">
-                <h2><a href="race.html">Elfo</a></h2>
-                <a href="race.html"><img src="https://mestretoy.com.br/wp-content/uploads/2021/10/capa-miniatura-elfos.png" alt="elfo"></a>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus, lacus sed posuere
-                    vehicula,
-                    nisl nisi fermentum erat, a rhoncus orci ipsum at nisl. Aenean tellus libero, ornare ac justo et,
-                    eleifend vulputate dolor. Integer vestibulum consectetur mi. Proin ac porta enim, eu convallis nisi.
-                    Nullam id lectus ac sem facilisis eleifend. Orci varius natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Aliquam eleifend turpis ac condimentum aliquet. Praesent metus
-                    massa,
-                    efficitur non dui a, scelerisque porta dolor. Aenean finibus nibh ac mattis imperdiet. Donec purus
-                    est,
-                    vestibulum id rhoncus rutrum, maximus a erat. Nunc convallis eleifend vulputate. Sed vehicula erat
-                    at
-                    faucibus elementum. Cras nec libero facilisis, scelerisque libero ac, ornare felis.
-                </p>
-                <p>
-                    Suspendisse potenti. Aenean mollis nisl vitae dui rhoncus, eu consequat odio cursus. Suspendisse
-                    pretium
-                    quam elementum ultrices pellentesque. Praesent euismod eleifend luctus. Phasellus a velit lacinia,
-                    convallis nulla at, sodales magna. Nunc ac nisl urna. Sed suscipit risus ac risus venenatis
-                    vestibulum.
-                </p>
-            </div>
-            <div id="orc" class="info">
-                <h2><a href="#">Orc</a></h2>
-                <a href="#"><img src="https://cdnb.artstation.com/p/assets/images/images/020/628/415/large/vyacheslav-prytula-124-7-orc-bust.jpg?1568559064" alt="Orc"></a>
-                <p>
-                    Suspendisse potenti. Aenean mollis nisl vitae dui rhoncus, eu consequat odio cursus. Suspendisse
-                    pretium
-                    quam elementum ultrices pellentesque. Praesent euismod eleifend luctus. Phasellus a velit lacinia,
-                    convallis nulla at, sodales magna. Nunc ac nisl urna. Sed suscipit risus ac risus venenatis
-                    vestibulum.
-                </p>
-                <p>
-                    Suspendisse potenti. Integer commodo hendrerit orci, at volutpat leo consequat quis. Class aptent
-                    taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse venenatis sapien
-                    nec
-                    eros pellentesque finibus. In eleifend sagittis eros. Aliquam augue est, faucibus in lacus id,
-                    convallis
-                    scelerisque metus. Mauris vitae facilisis magna. Suspendisse malesuada egestas nulla, sed hendrerit
-                    tortor vulputate sit amet. Nam gravida augue quis elit lobortis interdum nec vel erat.
-                </p>
-            </div>
-            <div class="info">
-                <h2><a href="#">Catnip</a></h2>
-                <a href="#"><img src="https://images.uesp.net/thumb/1/18/LG-avatar-Khajiit_Male_1.png/120px-LG-avatar-Khajiit_Male_1.png" alt="Catnip"></a>
-                <p>
-                    Vestibulum efficitur volutpat velit sed rhoncus. Proin dictum nisi tortor, at dignissim arcu porta
-                    eu.
-                    Phasellus placerat id diam eget lacinia. Donec non libero mattis, placerat leo ac, condimentum
-                    tellus.
-                    Aenean finibus, lorem in aliquam dictum, massa elit hendrerit nunc, quis pharetra est magna sit amet
-                    diam. Nam vulputate nibh ut velit imperdiet euismod. Sed laoreet rutrum ipsum, sed scelerisque lacus
-                    consectetur id. Integer eget sollicitudin felis, eu posuere nulla. Quisque blandit quam sed nibh
-                    varius
-                    consequat. Donec eleifend elementum libero, quis sodales nulla pharetra ac. In commodo erat at
-                    cursus
-                    hendrerit. Vivamus vestibulum tellus vitae tempus suscipit. In sit amet ligula eget metus tempor
-                    dignissim sed nec lorem. Nam tincidunt tempor justo, non blandit nunc malesuada sed.
-                </p>
-                <p>
-                    Quisque ut feugiat ante. Aliquam suscipit ex quis justo accumsan malesuada. Morbi maximus dui sit
-                    amet
-                    euismod commodo. Vivamus non risus consequat, gravida est in, rhoncus nibh. Curabitur aliquam dui
-                    scelerisque viverra rutrum. Sed viverra lacus eget porta scelerisque. Morbi a risus et mi porta
-                    pharetra. Aliquam rutrum lorem blandit, euismod nibh et, vestibulum arcu. Suspendisse sagittis lacus
-                    nec
-                    efficitur vehicula. Quisque id massa vel magna mattis imperdiet. Suspendisse ultricies at enim ut
-                    egestas. Aliquam sed sollicitudin massa. Nulla varius arcu neque, in mattis leo volutpat at.
-                    Phasellus
-                    dictum, arcu ac consequat mattis, est odio ultricies sem, nec volutpat erat lorem non turpis.
-                    Curabitur
-                    non mi magna. Quisque nec finibus sem.
-                </p>
-            </div>
-        </div>
-    </div>
+        <section id="plantas">
+
+            <article class="Aspargo-Alfinete">
+                <img src="https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/anturio-Anthurium-andraeanum_04.jpg" alt="">
+                <a href="#">
+                    <h2>Aspargo Alfinete</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            
+            <article class="Maria-sem-vergonha">
+                <img src="./img/maria-sem-vergonha.jpg" alt="">
+                <a href="#">
+                    <h2>Maria-sem-vergonha</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="setentacinco"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Maria-sem-vergonha">
+                <img src="./img/maria-sem-vergonha.jpg" alt="">
+                <a href="#">
+                    <h2>Maria-sem-vergonha</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="setentacinco"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Begonia-Beleaf">
+                <img src="./img/maria-sem-vergonha.jpg" alt="">
+                <a href="#">
+                    <h2>Begônia Beleaf</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Calanchoe">
+                <img src="https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/anturio-Anthurium-andraeanum_04.jpg" alt="">
+                <a href="#">
+                    <h2>Calanchoê</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="setentacinco"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Veu-De-Noiva">
+                <img src="./img/maria-sem-vergonha.jpg" alt="">
+                <a href="#">
+                    <h2>Véu de Noiva</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Espirradeira">
+                <img src="https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/anturio-Anthurium-andraeanum_04.jpg" alt="">
+                <a href="#">
+                    <h2>Espirradeira</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Geranio">
+                <img src="./img/maria-sem-vergonha.jpg" alt="">
+                <a href="#">
+                    <h2>Gerânio</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cinquenta"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="Hera-Estrela">
+                <img src="https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/anturio-Anthurium-andraeanum_04.jpg" alt="">
+                <a href="#">
+                    <h2>Hera Estrela</h2>
+                    <h4 class="tag">Flores</h4>
+                    <div>
+                        <h4>Iluminação</h4>
+                        <span class="setentacinco"></span>
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h4>Água</h4>
+                        <span class="cem"></span>
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet"></i>
+                            <i class="fa-solid fa-glass-water"></i>
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+
+        </section>
+
+    </main>
 </body>
 
 </html>
