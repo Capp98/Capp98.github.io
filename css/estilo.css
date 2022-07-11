@@ -6,7 +6,7 @@
 }
 
 :root {
-    --light-transparent-bg: rgba(255, 255, 255, .6);
+    --light-transparent-bg: rgba(255, 255, 255, .4);
     --dark-transparent-bg: rgba(0, 0, 0, .6);
     --transparent-bg: rgba(255, 255, 255, .9);
 }
@@ -33,6 +33,7 @@ header {
 }
 
 header > h1 {
+    margin: 0;
     line-height: 1.5em;
 }
 
@@ -49,9 +50,16 @@ aside {
     text-align: center;
     margin-left: 10px;
     position: sticky;
-    top: 0;
+    top: -1.9em; /*hide [aside h2]*/
     clear: both;
     display: inline-block;
+    background: #344286;
+    border-radius: 10px;
+    padding: 2.5px 2.5px 0px;
+}
+
+aside h2 {
+    text-decoration: underline;
 }
 
 aside > nav li {
@@ -72,24 +80,26 @@ aside > nav li span img {
     width: 1em;
 }
 
-aside > nav li:hover span {
+/* aside > nav li:hover span {
     opacity: 1;
     display: inline-block !important;
     margin-right: 5px;
-}
+} */
 
 aside > nav a {
     font-size: 1.2rem;
     padding: 7px;
     line-height: 1rem;
     display: block;
-    background: var(--transparent-bg);
+    background: var(--light-transparent-bg);
+    border: 1px solid var(--dark-transparent-bg);
     border-radius: 10px;
     transition: all .1s ease-in;
 }
 
 aside > nav a:hover {
     background: var(--dark-transparent-bg);
+    border: 1px solid var(--transparent-bg);
     color: #fff;
 }
 
@@ -111,6 +121,7 @@ main > section {
 section > article {
     flex-grow: 1;
     background: var(--light-transparent-bg);
+    border: 1px solid var(--dark-transparent-bg);
     text-align: center;
     height: max-content;
     padding-bottom: 15px;
@@ -118,7 +129,7 @@ section > article {
     max-width: 300px;
 
     border-radius: 20px;
-    flex-basis: 250px;
+    flex-basis: 200px;
     position: relative;
     overflow: hidden;
 }
@@ -132,23 +143,9 @@ article h2 {
 }
 
 article > img {
-    /* opacity: .8; */
     width: 100%;
 }
 
-article > img:hover {
-    /* opacity: 1; */
-}
-
-section > article > a > div.tags > h4:not(:first-of-type)::after {
-    /* content: ' '; */
-    height: 60%;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-left: 1px solid blue;
-}
 
 
 article > a > div:not(.tags) h4 {
@@ -228,4 +225,137 @@ section > article span:last-of-type.cinquenta::after {
 
 section > article span:last-of-type.cem::after {
     width: 100%;
+}
+
+
+@media (max-width: 767.98px) { 
+
+    html {
+        font-size: 12px;
+    }
+
+    aside {
+        padding: 0;
+        border-radius: 0;
+        width: 220px;
+        height: 400px;
+        position: fixed;
+        overflow: hidden;
+        top: 50px;
+        margin: 0;
+        z-index: 999;
+        background: none;
+    }
+
+    aside h2 {
+        display: none;
+    }
+
+    main span {
+        width: 20px;
+        height: 27px;
+        box-sizing: border-box;
+        float: left;
+        padding: 7px 5px 5px;
+        border: 1px solid black;
+        border-left: 0;
+        background: #345286;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+    }
+
+    aside nav {
+        transition: left .3s ease-out;
+        position: absolute;
+        top: 24px;
+        left: -220px;   
+        padding: 10px;
+        border-radius: 0 15px 15px 0;
+        background: #345286;
+        border: 1px solid var(--dark-transparent-bg);
+        border-left: none;
+    }
+
+    aside nav ul {
+        display: grid;
+        grid-template-columns: 90px 90px;
+        column-gap: 5px;
+    }
+
+    aside nav a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    section#plantas {
+        padding-left: 17px;
+        float: none;
+        width: 100%;
+    }
+
+    section > article {
+        flex-basis: 40%;
+    }
+
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    html {
+        font-size: 16px;
+    }
+
+    main aside {
+        width: 280px;
+        height: 430px;
+    }
+
+    aside span {
+        padding-top: 5px;
+    }
+
+    aside nav ul {
+        grid-template-columns: 120px 120px;
+    }
+
+    aside nav {
+        top: 26px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    main span {
+        display: none;
+    }
+
+    aside {
+        width: 14%;
+        min-width: 120px;
+        max-width: 140px;
+    }
+
+    section#plantas {
+        width: 81%;
+    }
+
+ }
+
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+    section#plantas {
+        width: 83%;
+    }
+
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    section#plantas {
+        width: 86.5%;
+    }
+
 }
