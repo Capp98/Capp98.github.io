@@ -142,8 +142,14 @@ article h2 {
     overflow: hidden;
 }
 
-article > img {
+article > div {
+    height: 160px;
+}
+
+article img {
+    object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 
 
@@ -188,6 +194,7 @@ section > article span::after {
     left: 0;
     top: 0;
     height: 100%;
+    border: 1px solid rgb(158,178,59);
     background: rgb(158,178,59);
 }
 
@@ -305,7 +312,7 @@ section > article span:last-of-type.cem::after {
         font-size: 16px;
     }
 
-    main aside {
+    aside {
         width: 280px;
         height: 430px;
     }
@@ -320,6 +327,7 @@ section > article span:last-of-type.cem::after {
 
     aside nav {
         top: 26px;
+        left: -280px;
     }
  }
 
