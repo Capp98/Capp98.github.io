@@ -20,53 +20,55 @@ ul {
 }
 
 body {
-    background: rgb(158,178,59);
-    background: linear-gradient(140deg, rgba(158,178,59,1) 0%, rgba(110,198,144,1) 77%, rgba(70,215,213,1) 100%);
+    background: rgb(158, 178, 59);
+    background: linear-gradient(140deg, rgba(158, 178, 59, 1) 0%, rgba(110, 198, 144, 1) 77%, rgba(70, 215, 213, 1) 100%);
     height: 100%;
 }
 
 header {
     height: 3em;
-    background: var(--light-transparent-bg);
+    background: rgb(78, 52, 134);
+    background: linear-gradient(140deg, rgba(78, 52, 134, 1) 0%, rgba(52, 82, 134, 1) 50%);
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid var(--dark-transparent-bg);
 }
 
-header > h1 {
+header>h1 {
     margin: 0;
     line-height: 1.5em;
 }
 
 main {
-    margin: 15px 0;
+    width: 100%;
+    height: fit-content;
     display: inline-block;
+    background: #345286;
+    position: relative;
 }
 
 /* ASIDE
 ------*/
 
 aside {
-    width: 10%;
     text-align: center;
-    margin-left: 10px;
     position: sticky;
-    top: -1.9em; /*hide [aside h2]*/
-    clear: both;
+    top: -1.9em;
+    /*hide [aside h2]*/
+    padding: 15px 10px 10px;
+
     display: inline-block;
-    background: #344286;
-    border-radius: 10px;
-    padding: 2.5px 2.5px 0px;
 }
 
 aside h2 {
     text-decoration: underline;
 }
 
-aside > nav li {
+aside>nav li {
     margin: 5px 0;
 }
 
-aside > nav li span {
+aside>nav li span {
     opacity: 0;
     display: none !important;
     width: 1em;
@@ -76,7 +78,7 @@ aside > nav li span {
     margin-top: -.8em;
 }
 
-aside > nav li span img {
+aside>nav li span img {
     width: 1em;
 }
 
@@ -86,7 +88,7 @@ aside > nav li span img {
     margin-right: 5px;
 } */
 
-aside > nav a {
+aside>nav a {
     font-size: 1.2rem;
     padding: 7px;
     line-height: 1rem;
@@ -97,7 +99,7 @@ aside > nav a {
     transition: all .1s ease-in;
 }
 
-aside > nav a:hover {
+aside>nav a:hover {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--transparent-bg);
     color: #fff;
@@ -106,19 +108,22 @@ aside > nav a:hover {
 /* SECTION
 --------*/
 
-main > section {
+main>section {
+    padding: 15px 10px 10px 0;
     float: right;
-    margin-right: 10px;
-    height: fit-content;
+    position: relative;
+    height: 100%;
     width: 86%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
-    margin-bottom: 10px;
+    background: var(--light-transparent-bg);
+
+    border-left: 1px solid var(--dark-transparent-bg);
 }
 
-section > article {
+section>article {
     flex-grow: 1;
     background: var(--light-transparent-bg);
     border: 1px solid var(--dark-transparent-bg);
@@ -142,7 +147,7 @@ article h2 {
     overflow: hidden;
 }
 
-article > div {
+article>div {
     height: 160px;
 }
 
@@ -154,29 +159,30 @@ article img {
 
 
 
-article > a > div:not(.tags) h4 {
+article>a>div:not(.tags) h4 {
     margin-top: 10px;
 }
 
-section > article > a > div {
+section>article>a>div {
     width: 40%;
     margin: 0px auto;
 }
 
-section > article > a > div div {
+section>article>a>div div {
     margin: 0 auto;
     text-align: center;
     display: block;
 }
 
-section > article i:nth-child(1) {
-float: left;
+section>article i:nth-child(1) {
+    float: left;
 }
-section > article i:nth-child(3) {
+
+section>article i:nth-child(3) {
     float: right;
 }
 
-section > article span {
+section>article span {
     display: inline-block;
     width: 100%;
     height: 20px;
@@ -188,54 +194,54 @@ section > article span {
     overflow: hidden;
 }
 
-section > article span::after {
+section>article span::after {
     content: ' ';
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    border: 1px solid rgb(158,178,59);
-    background: rgb(158,178,59);
+    border: 1px solid rgb(158, 178, 59);
+    background: rgb(158, 178, 59);
 }
 
 /*
 
 /*--- Iluminação ---*/
-section > article span:first-of-type::after {
+section>article span:first-of-type::after {
     width: 0%;
 }
 
-section > article span:first-of-type.vintecinco::after {
+section>article span:first-of-type.vintecinco::after {
     width: 25%;
 }
 
-section > article span:first-of-type.cinquenta::after {
+section>article span:first-of-type.cinquenta::after {
     width: 50%;
 }
 
-section > article span:first-of-type.setentacinco::after {
+section>article span:first-of-type.setentacinco::after {
     width: 75%;
 }
 
-section > article span:first-of-type.cem::after {
+section>article span:first-of-type.cem::after {
     width: 100%;
 }
 
 /*--- Água ---*/
-section > article span:last-of-type::after {
+section>article span:last-of-type::after {
     width: 25%;
 }
 
-section > article span:last-of-type.cinquenta::after {
+section>article span:last-of-type.cinquenta::after {
     width: 50%;
 }
 
-section > article span:last-of-type.cem::after {
+section>article span:last-of-type.cem::after {
     width: 100%;
 }
 
 
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
 
     html {
         font-size: 12px;
@@ -258,7 +264,7 @@ section > article span:last-of-type.cem::after {
         display: none;
     }
 
-    main span {
+    main aside span {
         width: 20px;
         height: 27px;
         box-sizing: border-box;
@@ -275,10 +281,11 @@ section > article span:last-of-type.cem::after {
         transition: left .3s ease-out;
         position: absolute;
         top: 24px;
-        left: -220px;   
+        left: -220px;
         padding: 10px;
         border-radius: 0 15px 15px 0;
         background: #345286;
+        /*#345286*/
         border: 1px solid var(--dark-transparent-bg);
         border-left: none;
     }
@@ -300,14 +307,14 @@ section > article span:last-of-type.cem::after {
         width: 100%;
     }
 
-    section > article {
+    section>article {
         flex-basis: 40%;
     }
 
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
+@media (min-width: 576px) and (max-width: 767.98px) {
     html {
         font-size: 16px;
     }
@@ -329,39 +336,39 @@ section > article span:last-of-type.cem::after {
         top: 26px;
         left: -280px;
     }
- }
+}
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
 
     main span {
         display: none;
     }
 
     aside {
-        width: 14%;
+        width: 100%;
         min-width: 120px;
-        max-width: 140px;
+        max-width: 13%;
     }
 
     section#plantas {
         width: 81%;
     }
 
- }
+}
 
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media (min-width: 992px) and (max-width: 1199.98px) {
 
     section#plantas {
         width: 83%;
     }
 
- }
+}
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     section#plantas {
         width: 86.5%;
     }
