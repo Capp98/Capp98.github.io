@@ -132,6 +132,7 @@ section>article {
     padding-bottom: 15px;
     margin: 10px 10px;
     max-width: 300px;
+    display: initial;
 
     border-radius: 20px;
     flex-basis: 200px;
@@ -373,4 +374,10 @@ section>article span:last-of-type.cem::after {
         width: 86.5%;
     }
 
+}
+
+.selecionado {
+    background: var(--dark-transparent-bg);
+    border: 1px solid var(--transparent-bg);
+    color: #fff;
 }

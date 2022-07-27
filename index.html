@@ -23,27 +23,28 @@
 
     <main>
         <aside>
-            <h2>Categorias</h2>
+            <input id="searchbar" placeholder="Pesquisar" aria-label="Pesquisa no site"
+                style="width: 100%; padding: 5px 5px 5px 10px;" onkeyup="searchPlants()" type="search">
             <span onclick="show(this)">></span>
             <nav>
                 <ul>
-                    <li><a href="#">Aquáticas</a></li>
-                    <li><a href="#"><span class="arbusto"><img src="./img/icons/bush.png"></span>Arbustos</a></li>
-                    <li><a href="#"><span><i class="fa-solid fa-tree"></i></span>Árvores</a></li>
-                    <li><a href="#">Bromélias</a></li>
-                    <li><a href="#">Cactos</a></li>
-                    <li><a href="#"><span class="material-icons">local_florist</span>Flores</a></li>
-                    <li><a href="#">Folhagens</a></li>
-                    <li><a href="#">Forrações</a></li>
-                    <li><a href="#"><span><i class="fa-solid fa-apple-whole"></i></span>Frutíferas</a></li>
-                    <li><a href="#">Grãos</a></li>
-                    <li><a href="#"><span><i class="fa-solid fa-carrot"></i></span>Hortaliças</a></li>
-                    <li><a href="#">Orquídeas</a></li>
-                    <li><a href="#">Palmeiras</a></li>
-                    <li><a href="#">PANCs</a></li>
-                    <li><a href="#">Samambaias</a></li>
-                    <li><a href="#">Suculentas</a></li>
-                    <li><a href="#">Trepadeiras</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Aquáticas</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Arbustos</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Árvores</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Bromélias</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Cactos</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Flores</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Folhagens</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Forrações</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Frutíferas</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Grãos</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Hortaliças</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Orquídeas</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Palmeiras</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">PANCs</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Samambaias</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Suculentas</a></li>
+                    <li><a onclick="searchByTag(this)" href="#">Trepadeiras</a></li>
                 </ul>
             </nav>
         </aside>
@@ -89,7 +90,7 @@
                     "id": 1,
                     "imgURL": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Rhapis_excelsa.jpg",
                     "nome": "Ráfia",
-                    "tags": ["Palmeiras", "Arbustos"],
+                    "tags": ["Arbustos", "Palmeiras"],
                     "iluminacao": "cinquenta",
                     "agua": "cinquenta"
                 },
@@ -137,7 +138,7 @@
                     "id": 7,
                     "imgURL": "https://bs.plantnet.org/image/o/58dab0b61dd48edff51c57394683139cb294ade8",
                     "nome": "Espirradeira",
-                    "tags": ["Flores", "Arbustos"],
+                    "tags": ["Arbustos", "Flores"],
                     "iluminacao": "cem",
                     "agua": "cinquenta"
                 },
@@ -153,16 +154,16 @@
                     "id": 9,
                     "imgURL": "https://cf.shopee.com.br/file/bb581689ee643f1bd92d63779fa12396",
                     "nome": "Hera Estrela",
-                    "tags": ["Folhagens", "Forração"],
+                    "tags": ["Folhagens", "Forrações"],
                     "iluminacao": "setentaecinco",
                     "agua": "cem"
                 },
                 {
                     "id": 10,
-                    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Rhapis_excelsa.jpg",
-                    "nome": "Ráfia",
-                    "tags": ["Palmeiras", "Arbustos"],
-                    "iluminacao": "cinquenta",
+                    "imgURL": "https://s2.glbimg.com/K5EywHvZM2LzirvLBmZH9iEMtm4=/780x440/e.glbimg.com/og/ed/f/original/2018/04/20/basil-total-2759319_1280.jpg",
+                    "nome": "Manjericão",
+                    "tags": ["Hortaliças"],
+                    "iluminacao": "setentaecinco",
                     "agua": "cinquenta"
                 },
                 {
@@ -193,7 +194,7 @@
                     "id": 14,
                     "imgURL": "https://www.floresefolhagens.com.br/wp-content/uploads/2015/05/cineraria-maritima-senecio-douglasii-1-6.jpg",
                     "nome": "Cinerária Maritima",
-                    "tags": ["Forração", "Folhagens"],
+                    "tags": ["Folhagens", "Forrações"],
                     "iluminacao": "cem",
                     "agua": "cinquenta"
                 },
@@ -201,7 +202,7 @@
                     "id": 15,
                     "imgURL": "https://cf.shopee.com.br/file/ecd642df269b12d27e619177e5588797",
                     "nome": "Trevo Roxo",
-                    "tags": ["PANCs", "Folhagens"],
+                    "tags": [ "Folhagens", "PANCs"],
                     "iluminacao": "setentaecinco",
                     "agua": ""
                 },
@@ -212,6 +213,134 @@
                     "tags": ["Folhagens"],
                     "iluminacao": "cem",
                     "agua": "cem"
+                },
+                {
+                    "id": 17,
+                    "imgURL": "https://construindodecor.com.br/wp-content/uploads/2018/04/Arvore-Felicidade.jpg",
+                    "nome": "Árvore da Felicidade",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "cinquenta",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 18,
+                    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Aloysia_citriodora_002.jpg/1200px-Aloysia_citriodora_002.jpg",
+                    "nome": "Lúcia Lima",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "cem",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 19,
+                    "imgURL": "https://www.jardimdasideias.com.br/wp-content/uploads/2018/11/planta-peixinho-418x315.png",
+                    "nome": "Columéia",
+                    "tags": ["Folhagens"],
+                    "iluminacao": "cinquenta",
+                    "agua": ""
+                },
+                {
+                    "id": 20,
+                    "imgURL": "https://i.ytimg.com/vi/T3yF39UpdA8/maxresdefault.jpg",
+                    "nome": "Clorofito",
+                    "tags": ["Folhagens"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 21,
+                    "imgURL": "https://t1.uc.ltmcdn.com/pt/posts/6/2/9/flor_de_maio_caindo_as_folhas_17926_4_600.webp",
+                    "nome": "Flor de Maio",
+                    "tags": ["Flores", "Suculentas"],
+                    "iluminacao": "cinquenta",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 22,
+                    "imgURL": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2020/05/27/clusia-pinterest.jpg",
+                    "nome": "Clúsia",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cem"
+                },
+                {
+                    "id": 23,
+                    "imgURL": "http://4.bp.blogspot.com/-h7zyQZQoPs8/T4bNbn2RdDI/AAAAAAAAMrY/-maGThKSQ8w/s1600/Acalifa+3.jpg",
+                    "nome": "Acalifa Verde",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 24,
+                    "imgURL": "https://proctorsnursery.co.uk/wp-content/uploads/2021/02/Salvia-Pink-Pong-NWP-WEB.jpg",
+                    "nome": "Sálvia Rosa",
+                    "tags": ["Arbustos", "Flores"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 25,
+                    "imgURL": "https://i.ytimg.com/vi/rf9JyOXTsp8/maxresdefault.jpg",
+                    "nome": "Flor Camarão",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 26,
+                    "imgURL": "https://i.pinimg.com/originals/5f/9d/b9/5f9db97cce8379962bdedb097f250a65.jpg",
+                    "nome": "Fitônia",
+                    "tags": ["Folhagens"],
+                    "iluminacao": "cinquenta",
+                    "agua": "cem"
+                },
+                {
+                    "id": 27,
+                    "imgURL": "https://www.coisasdaroca.com/wp-content/uploads/2019/06/Hibisco.jpg",
+                    "nome": "Hibisco",
+                    "tags": ["Arbustos", "Flores"],
+                    "iluminacao": "cem",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 28,
+                    "imgURL": "https://ciclovivo.com.br/wp-content/uploads/2020/08/herbs-5117039_1280-1024x682.jpg",
+                    "nome": "Alecrim",
+                    "tags": ["Hortaliças"],
+                    "iluminacao": "cem",
+                    "agua": ""
+                },
+                {
+                    "id": 29,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/clerodendro-vermelho.jpg",
+                    "nome": "Clerodendro Vermelho",
+                    "tags": ["Trepadeiras"],
+                    "iluminacao": "cem",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 30,
+                    "imgURL": "https://joov.com.br/images/saiba-tudo-sobre-a-hortela-pimenta-e-a-hortela-verde-image.jpg",
+                    "nome": "Hortelã",
+                    "tags": ["Hortaliças"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 31,
+                    "imgURL": "https://www.simplichique.com.br/wp-content/uploads/2017/02/jiboia-na-decora%C3%A7%C3%A3o-13.jpg",
+                    "nome": "Jiboia",
+                    "tags": ["Folhagens", "Trepadeiras"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
                 }
             ]
 
@@ -234,6 +363,8 @@
                 let img = document.createElement('img');
                 let divImg = document.createElement('div');
                 let article = document.createElement('article');
+                article.id = planta.id;
+                article.className = planta.nome
 
                 img.src = planta.imgURL;
                 img.alt = planta.nome;
@@ -247,6 +378,7 @@
                 let h4 = document.createElement('h4');
                 h4.className = 'tag'
                 planta.tags.forEach((tag, index) => {
+                    article.classList.add(tag)
                     h4.innerHTML += index === 0 ? tag : ` | ${tag}`;
                 })
                 a.appendChild(h2)
@@ -300,8 +432,50 @@
             })
         }
 
-        createViews();
+        function searchPlants() {
+            let plantas = document.getElementById('plantas').children;
+            let input = document.getElementById('searchbar').value
+            input = input.toLowerCase();
+            console.log(input);
+            if (input === '') {
+                plantas = Array.from(plantas)
+                plantas.forEach(view => view.style.display = "initial");
+            } else {
+                for (i = 0; i < plantas.length; i++) {
+                    if (!plantas[i].innerHTML.toLowerCase().includes(input)) {
+                        plantas[i].style.display = "none";
+                    }
+                    else {
+                        plantas[i].style.display = "initial";
+                    }
+                }
+            }
+        }
 
+        function searchByTag(e) {
+            e.classList.toggle('selecionado')
+
+            let tags = Array.from(document.getElementsByClassName('selecionado'));
+            let plantas = document.getElementById('plantas').children;
+
+            if (tags.length === 0) {
+                plantas = Array.from(plantas)
+                plantas.forEach(view => view.style.display = "initial");
+            } else {
+                let tagcollection = ''
+                tags.forEach(tag => tagcollection += `${tag.innerHTML} `)
+                for (i = 0; i < plantas.length; i++) {
+                    if (!plantas[i].className.includes(tagcollection.trim())) {
+                        plantas[i].style.display = "none";
+                    }
+                    else {
+                        plantas[i].style.display = "initial";
+                    }
+                }
+            }
+        }
+
+        createViews();
     </script>
 </body>
 
