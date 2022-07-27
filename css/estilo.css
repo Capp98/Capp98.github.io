@@ -11,6 +11,10 @@
     --transparent-bg: rgba(255, 255, 255, .9);
 }
 
+input[type="search"] {
+    margin-bottom: 10px;
+}
+
 a {
     text-decoration: none;
 }
@@ -53,7 +57,7 @@ main {
 aside {
     text-align: center;
     position: sticky;
-    top: -1.9em;
+    top: 0;
     /*hide [aside h2]*/
     padding: 15px 10px 10px;
 
@@ -349,7 +353,7 @@ section>article span:last-of-type.cem::after {
     aside {
         width: 100%;
         min-width: 120px;
-        max-width: 13%;
+        max-width: 19%;
     }
 
     section#plantas {
@@ -366,6 +370,10 @@ section>article span:last-of-type.cem::after {
         width: 83%;
     }
 
+    aside {
+        max-width: 17%;
+    }
+
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -374,6 +382,9 @@ section>article span:last-of-type.cem::after {
         width: 86.5%;
     }
 
+    aside {
+        max-width: 13.5%;
+    }
 }
 
 .selecionado {
