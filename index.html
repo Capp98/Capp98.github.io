@@ -26,8 +26,14 @@
             <span onclick="show(this)">></span>
             <nav>
                 <ul>
-                    <input id="searchbar" placeholder="Pesquisar" aria-placeholder="Pesquisa no site"
-                        onkeyup="searchPlants()" type="search">
+                    <li><input id="searchbar" placeholder="Pesquisar" 
+                        aria-placeholder="Pesquisa no site" onkeyup="searchPlants()" type="search">
+                    </li>
+                    <li class="viewToggler">
+                        <a onclick="toggleView(this)" href="#">
+                            <i class="fa-solid fa-table-list"></i>
+                        </a>
+                    </li>
                     <!-- <li><a onclick="searchByTag(this)" href="#">Aquáticas</a></li> -->
                     <li><a onclick="searchByTag(this)" href="#">Arbustos</a></li>
                     <li><a onclick="searchByTag(this)" href="#">Árvores</a></li>
@@ -81,6 +87,12 @@
 
     </main>
     <script>
+
+        const toggleView = () => {
+            document.getElementById('plantas').classList.toggle('expandido');
+            document.querySelector('.viewToggler i').classList.toggle('fa-table-cells-large')
+            document.querySelector('.viewToggler i').classList.toggle('fa-table-list')
+        }
 
         const json =
             [
@@ -331,6 +343,86 @@
                     "tags": ["Folhagens", "Trepadeiras"],
                     "iluminacao": "setentaecinco",
                     "agua": "cinquenta"
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
+                },
+                {
+                    "id": 33,
+                    "imgURL": "https://1.bp.blogspot.com/-m-7di13bTN0/W660oTTsGzI/AAAAAAAAK1s/kPqde-Dq09sHe0IeJYnZNoKmu9bfg3qcQCLcBGAs/s1600/DSC09788.JPG",
+                    "nome": "Bálsamo",
+                    "tags": ["Suculentas"],
+                    "iluminacao": "setentaecinco",
+                    "agua": ""
+                },
+                {
+                    "id": 34,
+                    "imgURL": "https://http2.mlstatic.com/D_NQ_NP_796819-MLB40355568420_012020-O.jpg",
+                    "nome": "Bola de Neve Mexicana",
+                    "tags": ["Suculentas"],
+                    "iluminacao": "setentaecinco",
+                    "agua": ""
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Portulaca_grandiflora_in_Sedovo_002.jpg/1280px-Portulaca_grandiflora_in_Sedovo_002.jpg",
+                    "nome": "Onze Horas",
+                    "tags": ["Suculentas"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://casa.abril.com.br/wp-content/uploads/2021/08/como-cultivar-anturio-casa.com-7-the-healthy-house-plant.jpg?quality=95&strip=info&w=1024",
+                    "nome": "Antúrio",
+                    "tags": ["Flores"],
+                    "iluminacao": "vintecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://ciclovivo.com.br/wp-content/uploads/2019/07/rosa-vermelha-no-jardim-1024x683.jpg",
+                    "nome": "Rosa",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": "vintecinco"
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
+                },
+                {
+                    "id": 32,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
+                    "nome": "Lavanda",
+                    "tags": ["Flores"],
+                    "iluminacao": "cem",
+                    "agua": ""
                 },
                 {
                     "id": 32,

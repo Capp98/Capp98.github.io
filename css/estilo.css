@@ -38,12 +38,12 @@ aside *{
     color: #fff;
 }
 
-aside>nav a {
+aside>nav>ul>li:not(.viewToggler)>a {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--light-transparent-bg);
 }
 
-.selecionado {
+.selecionado, aside>nav li:not(.viewToggler) a:hover {
     background: var(--light-transparent-bg);
     border: 1px solid var(--transparent-bg);
     color: #000;
@@ -150,8 +150,8 @@ aside>nav li span img {
     margin-right: 5px;
 } */
 
-aside>nav a {
-    font-size: 1.2rem;
+aside>nav>ul>li *:not(i) {
+    font-size: 1rem;
     padding: 7px;
     line-height: 1rem;
     display: block;    
@@ -159,11 +159,11 @@ aside>nav a {
     transition: all .1s ease-in;
 }
 
-aside>nav a:hover {
+/* aside>nav a:hover {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--transparent-bg);
     color: #fff;
-}
+} */
 
 /* SECTION
 --------*/
@@ -302,12 +302,7 @@ section>article span:last-of-type.cem::after {
     width: 100%;
 }
 
-
 @media (max-width: 767.98px) {
-
-    html {
-        font-size: 12px;
-    }
 
     aside {
         padding: 0;
@@ -373,6 +368,27 @@ section>article span:last-of-type.cem::after {
         flex-basis: 40%;
     }
 
+}
+
+@media (max-width: 576px) {
+
+    section.expandido>article {
+        flex-basis: 100%;
+        max-width: 400px;
+        font-size: 16px;
+    }
+
+    section.expandido>article>div {
+        height: 250px;
+    }
+}
+
+@media (min-width: 576px) {
+    
+    li.viewToggler {
+        display: none;
+    }
+    
 }
 
 /* // Small devices (landscape phones, 576px and up) */
