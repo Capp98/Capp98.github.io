@@ -372,10 +372,18 @@ section>article span:last-of-type.cem::after {
 
 @media (max-width: 576px) {
 
+    html {
+        font-size: 12px;
+    }
+
     section.expandido>article {
         flex-basis: 100%;
         max-width: 400px;
         font-size: 16px;
+    }
+    
+    section.expandido>article>a>div {
+        width: 60%;
     }
 
     section.expandido>article>div {
@@ -388,7 +396,7 @@ section>article span:last-of-type.cem::after {
     li.viewToggler {
         display: none;
     }
-    
+
 }
 
 /* // Small devices (landscape phones, 576px and up) */
