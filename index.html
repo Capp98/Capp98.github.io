@@ -16,7 +16,7 @@
     <title>Home - Plantas</title>
 </head>
 
-<body>
+<body onscroll="sidenavToTop()">
     <header>
         <h1>Acervo do jardim</h1>
     </header>
@@ -26,8 +26,8 @@
             <span onclick="show(this)">></span>
             <nav>
                 <ul>
-                    <li><input id="searchbar" placeholder="Pesquisar" 
-                        aria-placeholder="Pesquisa no site" onkeyup="searchPlants()" type="search">
+                    <li><input id="searchbar" placeholder="Pesquisar" aria-placeholder="Pesquisa no site"
+                            onkeyup="searchPlants()" type="search">
                     </li>
                     <li class="viewToggler">
                         <a onclick="toggleView(this)" href="#">
@@ -92,6 +92,19 @@
             document.getElementById('plantas').classList.toggle('expandido');
             document.querySelector('.viewToggler i').classList.toggle('fa-table-cells-large')
             document.querySelector('.viewToggler i').classList.toggle('fa-table-list')
+        }
+
+        const sidenavToTop = () => {
+            if ((document.body.offsetWidth + 15) <= 768) {
+
+                let headerAltura = document.querySelector('header').offsetHeight
+
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
+                    document.querySelector('aside').style.top = '0em'
+                } else {
+                    document.querySelector('aside').style.top = '3em'
+                }
+            }
         }
 
         const json =
@@ -212,7 +225,7 @@
                     "id": 15,
                     "imgURL": "https://cf.shopee.com.br/file/ecd642df269b12d27e619177e5588797",
                     "nome": "Trevo Roxo",
-                    "tags": [ "Folhagens", "PANCs"],
+                    "tags": ["Folhagens", "PANCs"],
                     "iluminacao": "setentaecinco",
                     "agua": ""
                 },
