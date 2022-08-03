@@ -29,7 +29,7 @@ header * {
     color: #fff;
 }
 
-aside, main aside span, aside nav {
+aside, main aside span, aside nav, main {
     background: #765b36;
 }
 
@@ -57,7 +57,7 @@ input[type="search"]::placeholder {
     color: #fff;
 }
 
-main, body {
+section, body {
     background: var(--secondary-color);
 }
 
@@ -116,9 +116,9 @@ aside {
     text-align: center;
     position: sticky;
     top: 0;
-    /*hide [aside h2]*/
     padding: 15px 10px 10px;
 
+    transition: padding-top .2s ease;
     display: inline-block;
 }
 
@@ -282,7 +282,7 @@ section>article span:first-of-type.cinquenta::after {
 }
 
 section>article span:first-of-type.setentaecinco::after {
-    width: 75%;
+    width: 70%;
 }
 
 section>article span:first-of-type.cem::after {

@@ -95,15 +95,22 @@
         }
 
         const sidenavToTop = () => {
+            let headerAltura = document.querySelector('header').offsetHeight
+
             if ((document.body.offsetWidth + 15) <= 768) {
-
-                let headerAltura = document.querySelector('header').offsetHeight
-
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
                     document.querySelector('aside').style.top = '0em'
                 } else {
                     document.querySelector('aside').style.top = '3em'
                 }
+            } else if (window.innerHeight >= 600) {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
+                    document.querySelector('aside').style.paddingTop = '3%'
+                } else {
+                    document.querySelector('aside').style.paddingTop = '15px'    
+                }
+            } else {
+                document.querySelector('aside').style.paddingTop = '15px'
             }
         }
 
@@ -382,7 +389,7 @@
                     "agua": ""
                 },
                 {
-                    "id": 32,
+                    "id": 35,
                     "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Portulaca_grandiflora_in_Sedovo_002.jpg/1280px-Portulaca_grandiflora_in_Sedovo_002.jpg",
                     "nome": "Onze Horas",
                     "tags": ["Suculentas"],
@@ -390,7 +397,7 @@
                     "agua": "cinquenta"
                 },
                 {
-                    "id": 32,
+                    "id": 36,
                     "imgURL": "https://casa.abril.com.br/wp-content/uploads/2021/08/como-cultivar-anturio-casa.com-7-the-healthy-house-plant.jpg?quality=95&strip=info&w=1024",
                     "nome": "Antúrio",
                     "tags": ["Flores"],
@@ -398,7 +405,7 @@
                     "agua": "cinquenta"
                 },
                 {
-                    "id": 32,
+                    "id": 37,
                     "imgURL": "https://ciclovivo.com.br/wp-content/uploads/2019/07/rosa-vermelha-no-jardim-1024x683.jpg",
                     "nome": "Rosa",
                     "tags": ["Flores"],
@@ -406,44 +413,84 @@
                     "agua": "vintecinco"
                 },
                 {
-                    "id": 32,
-                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
-                    "nome": "Lavanda",
-                    "tags": ["Flores"],
-                    "iluminacao": "cem",
+                    "id": 38,
+                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Arundina-bambusifolia-02.jpg",
+                    "nome": "Arundina",
+                    "tags": ["Flores", "Orquídeas"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 39,
+                    "imgURL": "https://www.bertoncelogarden.com.br/wp-content/uploads/2021/09/jasmim-estrela-1-800x667.png",
+                    "nome": "Jasmim estrela",
+                    "tags": ["Arbustos", "Trepadeiras"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 40,
+                    "imgURL": "https://blog.plantei.com.br/wp-content/uploads/2017/12/Babosa-Capa-1.jpg",
+                    "nome": "Babosa",
+                    "tags": ["Suculentas"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "vintecinco"
+                },
+                {
+                    "id": 41,
+                    "imgURL": "https://http2.mlstatic.com/D_NQ_NP_855238-MLB28343186089_102018-O.jpg",
+                    "nome": "Cróton",
+                    "tags": ["Arbustos"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 42,
+                    "imgURL": "https://www.tuacasa.com.br/wp-content/uploads/2019/06/bromelia-4-730x449.jpg",
+                    "nome": "Neoregélia",
+                    "tags": ["Bromélia"],
+                    "iluminacao": "cinquenta",
+                    "agua": "cinquenta"
+                },
+                {
+                    "id": 43,
+                    "imgURL": "https://folhago.com.br/blogs/viagens-baratas/wp-content/uploads/2021/12/como-cultivar-zamioculca-1.png",
+                    "nome": "Zamioculca",
+                    "tags": ["Folhagens"],
+                    "iluminacao": "cinquenta",
                     "agua": ""
                 },
                 {
-                    "id": 32,
-                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
-                    "nome": "Lavanda",
-                    "tags": ["Flores"],
-                    "iluminacao": "cem",
-                    "agua": ""
+                    "id": 44,
+                    "imgURL": "http://static3.tcdn.com.br/img/img_prod/450860/muda_de_dracena_tricolor_322_3_20190611093734.jpg",
+                    "nome": "Dracena Tricolor",
+                    "tags": ["Folhagens"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
                 },
                 {
-                    "id": 32,
-                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
-                    "nome": "Lavanda",
+                    "id": 45,
+                    "imgURL": "https://www.floresefolhagens.com.br/wp-content/uploads/2019/08/angelonia-angelonia-angustifolia.jpg",
+                    "nome": "Angelônia",
                     "tags": ["Flores"],
                     "iluminacao": "cem",
-                    "agua": ""
+                    "agua": "cinquenta"
                 },
                 {
-                    "id": 32,
-                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
-                    "nome": "Lavanda",
-                    "tags": ["Flores"],
-                    "iluminacao": "cem",
-                    "agua": ""
+                    "id": 46,
+                    "imgURL": "https://www.sitiodamata.com.br/pub/media/catalog/product/cache/02a967fa0e464fd60865ccf512e40f92/d/i/dipladenia-mandevilla-splendens-1-1-e1608183614996.jpg",
+                    "nome": "Jasmim Brasileiro",
+                    "tags": ["Arbustos", "Trepadeiras"],
+                    "iluminacao": "setentaecinco",
+                    "agua": "cinquenta"
                 },
                 {
-                    "id": 32,
-                    "imgURL": "https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Lavandula-dentata-10.jpg",
-                    "nome": "Lavanda",
+                    "id": 47,
+                    "imgURL": "https://guiadecomoplantar.com/wp-content/uploads/2020/10/Planta-Tapete-Saiba-Tudo-Sobre-Essa-Planta.jpg",
+                    "nome": "Planta Tapete",
                     "tags": ["Flores"],
-                    "iluminacao": "cem",
-                    "agua": ""
+                    "iluminacao": "cinquenta",
+                    "agua": "cinquenta"
                 }
             ]
 
