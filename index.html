@@ -23,34 +23,37 @@
 
     <main>
         <aside>
-            <span onclick="show(this)">></span>
-            <nav>
-                <ul>
-                    <li><input id="searchbar" placeholder="Pesquisar" aria-placeholder="Pesquisa no site"
-                            onkeyup="searchPlants()" type="search">
-                    </li>
-                    <li class="viewToggler">
-                        <a onclick="toggleView(this)" href="#">
-                            <i class="fa-solid fa-table-list"></i>
-                        </a>
-                    </li>
-                    <!-- <li><a onclick="searchByTag(this)" href="#">Aquáticas</a></li> -->
-                    <li><a onclick="searchByTag(this)" href="#">Arbustos</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Árvores</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Cactos</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Flores</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Folhagens</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Forrações</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Frutíferas</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Grãos</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Hortaliças</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Orquídeas</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Palmeiras</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">PANCs</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Suculentas</a></li>
-                    <li><a onclick="searchByTag(this)" href="#">Trepadeiras</a></li>
-                </ul>
-            </nav>
+            <div class="asideContainer">
+                <span onclick="show(this)"><a href="#">></a></span>
+                <nav>
+                    <ul>
+                        <li><input id="searchbar" placeholder="Pesquisar" aria-placeholder="Pesquisa no site"
+                                onkeyup="searchPlants()" type="search">
+                        </li>
+                        <li class="viewToggler">
+                            <a onclick="toggleView(this)" href="#">
+                                <i class="fa-solid fa-table-list"></i>
+                            </a>
+                        </li>
+                        <!-- <li><a onclick="searchByTag(this)" href="#">Aquáticas</a></li> -->
+                        <li><a onclick="searchByTag(this)" href="#">Arbustos</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Árvores</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Cactos</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Flores</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Folhagens</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Forrações</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Frutíferas</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Grãos</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Hortaliças</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Orquídeas</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Palmeiras</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">PANCs</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Suculentas</a></li>
+                        <li><a onclick="searchByTag(this)" href="#">Trepadeiras</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
         </aside>
 
         <section id="plantas">
@@ -98,11 +101,11 @@
             let headerAltura = document.querySelector('header').offsetHeight
 
             if ((document.body.offsetWidth + 15) <= 768) {
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
-                    document.querySelector('aside').style.top = '0em'
-                } else {
-                    document.querySelector('aside').style.top = '3em'
-                }
+                // if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
+                //     document.querySelector('aside').style.top = '0em'
+                // } else {
+                //     document.querySelector('aside').style.top = '3em'
+                // }
             } else if (window.innerHeight >= 600) {
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > headerAltura) {
                     document.querySelector('aside').style.paddingTop = '3%'
@@ -495,16 +498,12 @@
             ]
 
         function show(element) {
-            let a = element;
-            let s = element.nextElementSibling;
-            console.log(s.style.left);
-            if (s.style.left != '0px') {
-                s.style.left = '0px';
-                element.innerHTML = '<'
-            } else {
-                element.innerHTML = '>'
-                s.style.left = '-280px';
-            }
+            let container = document.getElementsByClassName('asideContainer')[0]
+            container.classList.toggle('on')
+            let a = container.children[0]
+            console.log(a);
+            a.innerHTML = container.classList.contains('on') ?
+                '<' : '>'
         }
 
         function createViews() {

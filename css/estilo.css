@@ -38,12 +38,12 @@ aside *{
     color: #fff;
 }
 
-aside>nav>ul>li:not(.viewToggler) a {
+aside nav>ul>li:not(.viewToggler) a {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--light-transparent-bg);
 }
 
-.selecionado, aside>nav li:not(.viewToggler) a:hover {
+.selecionado, aside nav li:not(.viewToggler) a:hover {
     background: var(--light-transparent-bg) !important;
     border: 1px solid var(--transparent-bg) !important;
     color: #000;
@@ -126,11 +126,11 @@ aside h2 {
     text-decoration: underline;
 }
 
-aside>nav li {
+aside nav li {
     margin: 5px 0;
 }
 
-aside>nav li span {
+aside nav li span {
     opacity: 0;
     display: none !important;
     width: 1em;
@@ -140,7 +140,7 @@ aside>nav li span {
     margin-top: -.8em;
 }
 
-aside>nav li span img {
+aside nav li span img {
     width: 1em;
 }
 
@@ -150,7 +150,7 @@ aside>nav li span img {
     margin-right: 5px;
 } */
 
-aside>nav>ul>li *:not(i) {
+aside nav>ul>li *:not(i) {
     font-size: 1rem;
     padding: 7px;
     line-height: 1rem;
@@ -159,7 +159,7 @@ aside>nav>ul>li *:not(i) {
     transition: all .1s ease-in;
 }
 
-/* aside>nav a:hover {
+/* aside nav a:hover {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--transparent-bg);
     color: #fff;
@@ -307,51 +307,78 @@ section>article span:last-of-type.cem::after {
     aside {
         padding: 0;
         border-radius: 0;
-        width: 220px;
-        height: 400px;
+        width: auto;
+        height: auto;
         position: fixed;
         overflow: hidden;
-        top: 3em;
+        top: 50%;
+        transform: translateY(-50%);
         margin: 0;
         z-index: 999;
         background: none;
-    }
+    }    
 
     aside h2 {
         display: none;
     }
 
+    aside > div {
+        position: relative;
+        width: 290px;
+        height: 325px;
+        margin-left: -91%;
+        transition: margin-left .3s ease-out;
+    }
+
     main aside span {
-        width: auto;
-        height: 30px;
-        line-height: 20px;
         font-size: 1.2em;
+        width: 9%;
+        height: 100%;
+        position: absolute;
+        right: 0;
         box-sizing: border-box;
-        float: left;
-        padding: 5px 10px;
-        border: 1px solid black;
-        border-left: 0;
+        padding: 5px;
+        border: 1px solid var(--dark-transparent-bg);
+        vertical-align: middle;
         cursor: pointer;
         color: #fff;
         border-radius: 0 5px 5px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    aside nav {
+    div.on {
+        margin-left: 0;
+    }
+    /* aside nav {
         transition: left .3s ease-out;
         position: absolute;
         top: 28px;
-        left: -220px;
         padding: 10px;
         border-radius: 0 15px 15px 0;
-        /* background: #345286; */
-        /*#345286*/
+
         border: 1px solid var(--dark-transparent-bg);
+        border-left: none;
+    } */
+
+    aside nav {
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 91%;
+        /* border-radius: 0 15px 15px 0; */
+        border: 1px solid var(--dark-transparent-bg);
+        border-right: none;
         border-left: none;
     }
 
     aside nav ul {
         display: grid;
-        grid-template-columns: 90px 90px;
+        grid-template-columns: 120px 120px;
         column-gap: 5px;
     }
 
@@ -376,6 +403,10 @@ section>article span:last-of-type.cem::after {
 
     html {
         font-size: 12px;
+    }
+
+    section>article>div {
+        height: 130px;
     }
 
     section.expandido>article {
@@ -407,22 +438,9 @@ section>article span:last-of-type.cem::after {
         font-size: 16px;
     }
 
-    aside {
-        width: 280px;
-        height: 430px;
-    }
-
-    aside span {
-        padding-top: 5px;
-    }
-
-    aside nav ul {
-        grid-template-columns: 120px 120px;
-    }
-
-    aside nav {
-        top: 26px;
-        left: -280px;
+    aside div {
+        width: 285px;
+        height: 356px;
     }
 }
 
