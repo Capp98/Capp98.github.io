@@ -482,7 +482,6 @@ function searchByName() {
     if (name === '' && tags.length === 0) {
         showAllPlants(plants)
     } else if (tags.length != 0) {
-        console.log('entrei');
         showPlantsByNameAndTags(plants, name, tags)
     } else {
         showPlantsByName(plants, name)
@@ -506,7 +505,7 @@ function showPlantsByNameAndTags(plants, name, tags) {
             return tagcollection.includes(word);
           })
 
-        if (!(plants[i].className.toLowerCase().includes(name)
+        if (!(plants[i].className.toLowerCase().includes(name.toLowerCase())
             && (atributos.length === tagcollection.length))) {
             plants[i].style.display = "none";
         }
@@ -540,7 +539,7 @@ function showPlantsByTags(plants, tags) {
 
 function showPlantsByName(plants, name) {
     for (i = 0; i < plants.length; i++) {
-        if (!plants[i].className.toLowerCase().includes(name)) {
+        if (!plants[i].className.toLowerCase().includes(name.toLowerCase())) {
             plants[i].style.display = "none";
         }
         else {
