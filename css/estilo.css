@@ -1,8 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=EB+Garamond&family=Libre+Baskerville:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
 }
+
 
 /* Color Theme Swatches in Hex */
 .areia-1-hex {
@@ -55,43 +68,60 @@ aside * {
     color: #fff;
 }
 
-aside nav>ul>li:not(.viewToggler) a {
+aside nav>ul li:not(.viewToggler, .search) {
     background: var(--dark-transparent-bg);
     border: 1px solid var(--light-transparent-bg);
 }
 
-.selecionado,
-aside nav li:not(.viewToggler) a:hover {
+.selecionado ,
+aside nav li:not(.viewToggler, .search):hover {
     background: var(--light-transparent-bg) !important;
     border: 1px solid var(--transparent-bg) !important;
     color: #000;
+    cursor: pointer;
 }
 
-input[type="search"] {
+input[type="text"] {
     background: var(--light-transparent-bg);
 }
 
-input[type="search"]::placeholder {
+input[type="text"]::-webkit-input-placeholder {
     color: #fff;
 }
 
-section,
+input[type="text"]::-moz-placeholder {
+    color: #fff;
+}
+
+input[type="text"]:-ms-input-placeholder {
+    color: #fff;
+}
+
+input[type="text"]::-ms-input-placeholder {
+    color: #fff;
+}
+
+input[type="text"]::placeholder {
+    color: #fff;
+}
+
+#plantas,
 body {
     background: var(--secondary-color);
 }
 
-main section * {
+main #plantas * {
     color: #000;
 }
 
-section>article {
+#plantas>article {
     background: var(--light-transparent-bg);
     border: 1px solid var(--dark-transparent-bg);
 }
 
 /*-------------------*/
 
-input[type="search"] {
+input[type="text"] {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
@@ -105,7 +135,12 @@ ul {
     list-style: none;
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
+    font-size: 100%;
     height: 100%;
 }
 
@@ -123,6 +158,8 @@ header>h1 {
 
 main {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     display: inline-block;
     position: relative;
@@ -135,7 +172,11 @@ aside {
     text-align: center;
     position: sticky;
     top: 0;
-    padding: 15px 10px 10px;
+    padding: 0px 10px 10px;
+
+    -webkit-transition: padding-top .2s ease;
+
+    -o-transition: padding-top .2s ease;
 
     transition: padding-top .2s ease;
     display: inline-block;
@@ -145,66 +186,62 @@ aside h2 {
     text-decoration: underline;
 }
 
-aside nav li {
-    margin: 5px 0;
-}
-
-aside nav li span {
-    opacity: 0;
-    display: none !important;
-    width: 1em;
-    font-size: 1em !important;
-    height: 10px !important;
-    vertical-align: middle !important;
-    margin-top: -.8em;
-}
-
-aside nav li span img {
-    width: 1em;
-}
-
-/* aside > nav li:hover span {
-    opacity: 1;
-    display: inline-block !important;
-    margin-right: 5px;
-} */
-
-aside nav>ul>li *:not(i) {
+aside nav>ul li {
     font-size: 1rem;
     padding: 7px;
     line-height: 1rem;
     display: block;
     border-radius: 10px;
+    -webkit-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    margin: 5px 0;
 }
 
-/* aside nav a:hover {
-    background: var(--dark-transparent-bg);
-    border: 1px solid var(--transparent-bg);
-    color: #fff;
-} */
+aside nav>ul li.search {
+    padding: 0px;
+}
 
-/* SECTION
+aside nav>ul li:nth-child(16) ~ li {
+    display: inline-block;
+    width: 31.3%;
+}
+
+/* #plantas
 --------*/
 
-main>section {
+main>#plantas {
     padding: 15px 10px 10px 0;
     float: right;
     position: relative;
     height: 100%;
     width: 86%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+
+    -webkit-transition: all .3s ease;
+
+    -o-transition: all .3s ease;
 
     transition: all .3s ease;
     border-left: 1px solid var(--dark-transparent-bg);
 }
 
-section>article {
-    flex-grow: 1;
+#plantas>article {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: center;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding-bottom: 15px;
     margin: 10px;
@@ -212,7 +249,8 @@ section>article {
     display: initial;
 
     border-radius: 20px;
-    flex-basis: 250px;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
     position: relative;
     overflow: hidden;
     cursor: default;
@@ -221,19 +259,36 @@ section>article {
 article h2 {
     width: 100%;
     margin: 0px auto;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
-article>div {
+.imgContainer {
     height: 160px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-article img {
-    object-fit: cover;
+.imgContainer>img {
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.imgContainer:hover>img {
+    opacity: .9;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .tag {
@@ -246,32 +301,32 @@ article>div>div h4 {
     font-size: 1.1em;
 }
 
-section>article>div>div {
+#plantas>article>div>div {
     width: 70%;
     margin: 0px auto;
 }
 
-section>article>div>div div {
+#plantas>article>div>div div {
     margin: 0 auto;
     text-align: center;
     display: block;
 }
 
-section>article i {
+#plantas>article i {
     position: relative;
     font-size: 1.3em;
 }
 
-section>article i:nth-child(1) {
+#plantas>article i:nth-child(1) {
     float: left;
 }
 
-section>article i:nth-child(3) {
+#plantas>article i:nth-child(3) {
     float: right;
 }
 
 /*Cilindro nas informações*/
-section>article span {
+#plantas>article span {
     display: inline-block;
     width: 100%;
     height: 20px;
@@ -283,7 +338,7 @@ section>article span {
     overflow: hidden;
 }
 
-section>article span::after {
+#plantas>article span::after {
     content: ' ';
     position: absolute;
     left: 0;
@@ -293,13 +348,19 @@ section>article span::after {
     background: rgb(158, 178, 59);
 }
 
-.iluminacao i::after, .agua i::after {
-    font-size: .8em;
+.iluminacao i::after,
+.rega i::after {
+    font-size: .6em;
     position: absolute;
-    bottom: -1em;
+    bottom: -1.4em;
     left: 25%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
-    display: none;
+    opacity: 0;
+    -webkit-transition: opacity .1s .2s ease;
+    -o-transition: opacity .1s .2s ease;
+    transition: opacity .1s .2s ease;
 }
 
 /*--- Iluminação ---*/
@@ -315,50 +376,46 @@ section>article span::after {
     content: 'Sol';
 }
 
-section>article span:first-of-type::after {
-    width: 0%;
-}
-
-section>article span:first-of-type.vintecinco::after {
+#plantas>article span:first-of-type.breu::after {
     width: 25%;
 }
 
-section>article span:first-of-type.cinquenta::after {
+#plantas>article span:first-of-type.meia-sombra::after {
     width: 50%;
 }
 
-section>article span:first-of-type.setentaecinco::after {
-    width: 75%;
-}
-
-section>article span:first-of-type.cem::after {
+#plantas>article span:first-of-type.sol-pleno::after {
     width: 100%;
 }
 
-/*--- Água ---*/
+#plantas>article span:first-of-type.meia-sombra.sol-pleno::after {
+    width: 75%;
+}
 
-.agua i:nth-child(1):after {
+/*--- Rega ---*/
+
+.rega i:nth-child(1):after {
     content: 'Pouca';
 }
 
-.agua i:nth-child(2):after {
-    content: 'Média';
+.rega i:nth-child(2):after {
+    content: 'Moderada';
 }
 
-.agua i:nth-child(3):after {
-    content: 'Muita';
+.rega i:nth-child(3):after {
+    content: 'Frequente';
     left: -75%;
 }
 
-section>article span:last-of-type::after {
+#plantas>article span:last-of-type.pouca::after {
     width: 25%;
 }
 
-section>article span:last-of-type.cinquenta::after {
+#plantas>article span:last-of-type.moderada::after {
     width: 50%;
 }
 
-section>article span:last-of-type.cem::after {
+#plantas>article span:last-of-type.frequente::after {
     width: 100%;
 }
 
@@ -372,10 +429,16 @@ section>article span:last-of-type.cem::after {
         position: fixed;
         overflow: hidden;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0;
+        margin-left: -310px;
         z-index: 999;
         background: none;
+        -webkit-transition: margin-left .3s ease-out;
+        -o-transition: margin-left .3s ease-out;
+        transition: margin-left .3s ease-out;
     }
 
     aside h2 {
@@ -385,9 +448,7 @@ section>article span:last-of-type.cem::after {
     aside>div {
         position: relative;
         width: 290px;
-        height: 325px;
-        margin-left: -91%;
-        transition: margin-left .3s ease-out;
+        height: 400px;
     }
 
     main aside span {
@@ -396,33 +457,32 @@ section>article span:last-of-type.cem::after {
         height: 100%;
         position: absolute;
         right: 0;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 5px;
+
         border: 1px solid var(--dark-transparent-bg);
         vertical-align: middle;
         cursor: pointer;
         color: #fff;
         border-radius: 0 5px 5px 0;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
-    div.on {
+    aside.on {
         margin-left: 0;
     }
-
-    /* aside nav {
-        transition: left .3s ease-out;
-        position: absolute;
-        top: 28px;
-        padding: 10px;
-        border-radius: 0 15px 15px 0;
-
-        border: 1px solid var(--dark-transparent-bg);
-        border-left: none;
-    } */
 
     aside nav {
         display: inline-block;
@@ -431,31 +491,56 @@ section>article span:last-of-type.cem::after {
         left: 0;
         height: 100%;
         width: 91%;
-        /* border-radius: 0 15px 15px 0; */
         border: 1px solid var(--dark-transparent-bg);
         border-right: none;
         border-left: none;
     }
 
     aside nav ul {
-        display: grid;
-        grid-template-columns: 120px 120px;
-        column-gap: 5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+
+    ul li {
+        -ms-flex-preferred-size: 48%;
+            flex-basis: 48%;
+    }
+
+    ul li:nth-child(16) ~ li {
+        -ms-flex-preferred-size: 15%;
+            flex-basis: 15%;
+    }
+    ul li:nth-child(19) ~ li {
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
     }
 
     aside nav a {
         overflow: hidden;
-        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
     }
 
-    section#plantas {
+    #plantas#plantas {
         padding-left: 17px;
         float: none;
         width: 100%;
     }
 
-    section>article {
-        flex-basis: 45%;
+    #plantas>article {
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
     }
 
 }
@@ -466,21 +551,31 @@ section>article span:last-of-type.cem::after {
         font-size: 12px;
     }
 
-    section>article>div {
+    #plantas>article>div {
         height: 130px;
     }
 
-    section.expandido>article {
-        flex-basis: 100%;
+    aside {
+        margin-left: -264px;
+    }
+
+    ul li:nth-child(16) ~ li {
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+    }
+
+    #plantas.expandido>article {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
         max-width: 400px;
         font-size: 16px;
     }
 
-    section.expandido>article>div>div {
+    #plantas.expandido>article>div>div {
         width: 60%;
     }
 
-    section.expandido>article>div {
+    #plantas.expandido>article>div {
         height: 250px;
     }
 }
@@ -496,12 +591,12 @@ section>article span:last-of-type.cem::after {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     aside div {
-        width: 285px;
-        height: 356px;
+        width: 340px;
+        height: 397px;
     }
 }
 
@@ -518,7 +613,7 @@ section>article span:last-of-type.cem::after {
         max-width: 19%;
     }
 
-    section#plantas {
+    #plantas#plantas {
         width: 81%;
     }
 
@@ -528,7 +623,7 @@ section>article span:last-of-type.cem::after {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-    section#plantas {
+    #plantas#plantas {
         width: 83%;
     }
 
@@ -540,7 +635,7 @@ section>article span:last-of-type.cem::after {
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    section#plantas {
+    #plantas#plantas {
         width: 86.5%;
     }
 
@@ -558,12 +653,14 @@ section>article span:last-of-type.cem::after {
         top: 50%;
         left: 50%;
         z-index: 999;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         background-color: #735E45;
     }
 
-    .iluminacao i:hover::after, .agua i:hover::after {
-        display: unset;
-        font-family: Arial, Helvetica, sans-serif;
+    .iluminacao i:hover::after,
+    .rega i:hover::after {
+        opacity: 1;
     }
 }
